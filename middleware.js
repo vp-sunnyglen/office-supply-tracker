@@ -1,0 +1,10 @@
+// middleware.js (lives at the project root, NOT inside the app folder)
+import { NextResponse } from "next/server";
+
+export function middleware(req) {
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+};
